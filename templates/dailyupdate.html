@@ -1,0 +1,115 @@
+<! DOCTYPE html>
+<html lang="en" dir = "ltr">
+    <head>
+        <meta charset = "utf-8">
+        <!-- <link  rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/narrow-jumbotron.css')}}"> -->
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/slider.css')}}">
+        
+        <!-- <script src="../static/js/jquery-3.5.0.min.js"></script> -->
+        <script src="../static/js/capturedaily.js"></script>
+        <title>Daily Update</title>
+    </head>
+    <body>
+        {% extends "template.html" %}
+
+        {% block jumbotron %}
+        Insert any specfic content for this page's Jumbotron here
+        {% endblock %}
+
+        {% block main_content %}
+        <div class = "col-md-12">
+        <form class="form-group" id = "daily_qs"> 
+            <!-- Username - for testing purposes; this will be replaced by a login -->
+            <label for = "user_id">Select user:</label>
+            <select class = "form-control" id = "user_id" name = "user_id">
+                <option>TEST</option>
+                <option>NEI001</option>
+            </select>
+            <!-- Slider input goes here; allows more variable input -->
+
+            <div class="slidecontainer">
+                <p>Level of energy today</p>
+                <input type="range" min="1" max="100" value="50" class="slider" id="energy_levels" name="energy_levels">
+                <script src="../static/js/slider.js"></script>
+                <div class = row>
+                    <div class = "col-md-6" align = "left"><p>Low</p></div>
+                    <div class = "col-md-6" align = "right"><p>High</p></div>
+                </div>
+            </div>
+            
+            <div class="slidecontainer">
+                <p>Feeling of well-being today</p>
+                <input type="range" min="1" max="100" value="50" class="slider" id="well_being" name="well_being">
+                <script src="../static/js/slider.js"></script>
+                <div class = row>
+                    <div class = "col-md-6" align = "left"><p>Low</p></div>
+                    <div class = "col-md-6" align = "right"><p>High</p></div>
+                </div>
+            </div>
+            
+            <div class="slidecontainer">
+                <p>Overall frustration</p>
+                <input type="range" min="1" max="100" value="50" class="slider" id="frustration" name="frustration">
+                <script src="../static/js/slider.js"></script>
+                <div class = row>
+                    <div class = "col-md-6" align = "left"><p>Low</p></div>
+                    <div class = "col-md-6" align = "right"><p>High</p></div>
+                </div>
+            </div>
+            <div class="slidecontainer">
+                <p>Anxiety level</p>
+                <input type="range" min="1" max="100" value="50" class="slider" id="anxiety_level" name="anxiety_level">
+                <script src="../static/js/slider.js"></script>
+                <div class = row>
+                    <div class = "col-md-6" align = "left"><p>Low</p></div>
+                    <div class = "col-md-6" align = "right"><p>High</p></div>
+                </div>
+            </div>
+            
+            <!-- input field content goes here  -->
+
+            <label for="hours_sleep">Hours of sleep</label>
+            <input type="text" id="hours_sleep" name="hours_sleep" class="form-control" 
+            placeholder="Hours of sleep (e.g. 7.5)">
+            <br>
+            <label for="cups_coffee">Cups of coffee yesterday</label>
+            <input type="number" min="0" id="cups_coffee" name="cups_coffee" class="form-control" 
+            placeholder="Cups of coffee">
+            <br>
+            <label for="units_alcohol">Units of alcohol yesterday</label>
+            <input type="text" id="units_alcohol" name="units_alcohol"  class="form-control" 
+            placeholder="Units alcohol (shot/glasses)" >
+            <br>
+            <label for="exercise">Exercise today</label>
+            <input type="text" id="exercise" name="exercise" class="form-control" 
+            placeholder="Minutes of exercise (e.g. 45)" >
+            <br>
+            <label for="hours_work">Hours spent working yesterday</label>
+            <input type="text" id="hours_work" name="hours_work" class="form-control" 
+            placeholder="Hours spent working (e.g. 8.5)" >
+            <br>
+            
+            <!-- Free text input goes here -->
+            
+            <label for="day_highlight">What was the highlight of your day</label>
+            <textarea id="day_highlight" name="day_highlight" rows ="4" class="form-control" 
+            placeholder="What, if anything, was the highlight of your day. Leave this blank if you don't want to add anything."></textarea>
+            <br>
+            <label for="day_lowlight">What was the lowest point of your day</label>
+            <textarea id="day_lowlight" name="day_lowlight" rows ="4" class="form-control" 
+            placeholder="What, if anything, was the low point (lowlight) of your day. Leave this blank if you don't want to add anything."></textarea>
+            <br>
+            <label for="free_text">Anything else you want to share</label>
+            <textarea id="free_text" name="free_text" rows ="4" class="form-control" 
+            placeholder="Anything else happen today that you want to share?"></textarea>
+            <br>
+            <a id="btnSubmit" class="btn btn-md btn-primary" type="button" onclick = "captureDaily();" 
+            href = "#">Submit</a>
+            <a class="btn btn-md btn-primary" role="button" href="../">Cancel</a>
+
+        </form>
+        </div>
+        {% endblock %}
+    </body>
+</html>

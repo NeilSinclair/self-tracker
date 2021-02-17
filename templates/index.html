@@ -1,0 +1,39 @@
+<! DOCTYPE html>
+<html lang="en" dir = "ltr">
+    <head>
+        <meta charset = "utf-8">
+        <title>Home</title>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+    </head>
+    <body>
+        <div>
+        {% extends "template.html" %}
+        
+        {% block jumbotron %}
+        <canvas id = "summaryChart" width = "200", height = "130"></canvas>
+
+        {% endblock %}
+
+        {% block main_content %}
+        <div class = "col-md-6" align = "left">
+            <button type = "button" class = "btn btn-sm" id = "chart_time" align = "right">Time view</button>
+        </div>
+        <div class = "col-md-6" align = "right">    
+            <button type = "button" class = "btn btn-sm" id = "chart_rel" align = "left">Relationship view</button>
+            <br><br>
+        </div>
+        <div class = "col-md-12" id = "buttons_div">
+            <!-- Here the buttons for the various variables are shown -->
+            <script src = "../static/js/genchart.js"></script>
+        </div>
+        
+        <div class = "col-md-12" align = "center">
+            <br>
+            <a href = "/" class = "btn btn-lg btn-success">&nbsp&nbsp&nbsp Share how you're feeling today &nbsp&nbsp&nbsp</a>
+            <br><br>
+            <a href = "/drivers" class = "btn btn-lg btn-info"> See what drives your emotional state </a>
+        </div>
+        {% endblock %}
+        </div>
+    </body>
+</html>

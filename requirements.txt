@@ -1,0 +1,7 @@
+Flask==1.1.2
+Werkzeug
+pandas
+numpy==1.18.4
+sqlalchemy==1.3.17
+pymysql
+sklearn

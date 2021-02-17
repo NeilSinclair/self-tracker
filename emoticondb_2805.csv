@@ -1,0 +1,12 @@
+user_id,energy_levels,well_being,frustration,anxiety_level,hours_sleep,cups_coffee,units_alcohol,minutes_exercise,hours_work,day_highlight,day_lowlight,free_text,date,hour
+NEI001,83,80,14,,8,2,1,70,9,Some highlight text,Some lowlight text,Some free text,2020/05/15,15
+NEI001,74,75,50,,8,2,2,0,6,Some highlight text,,Some free text,2020/05/16,20
+NEI001,74,81,7,,8.5,2,3,75,5,Some highlight text,Some lowlight text,Some free text,2020/05/17,20
+NEI001,81,81,14,,8,2,2,0,8,Some highlight text,Some lowlight text,Some free text,2020/05/18,21
+NEI001,77,70,31,,7.2,2,1,90,8,,,Some free text,2020/05/19,22
+NEI001,73,65,26,48,7.5,2,1,80,8,Some highlight text,,,2020/05/21,17
+NEI001,72,60,32,42,7.5,2,1,80,6,,Some lowlight text,Some free text,2020/05/23,13
+NEI001,77,67,8,8,8,2,1,80,5,Some highlight text,,,2020/05/24,13
+NEI001,68,63,12,17,8,2,2,0,5,Some highlight text,,Some free text,2020/05/25,22
+NEI001,74,72,7,11,7.5,2,3,30,6,Some highlight text,,,2020/05/26,14
+NEI001,54,43,76,55,7.5,3,0,90,7,,Some lowlight text,,2020/05/27,15
